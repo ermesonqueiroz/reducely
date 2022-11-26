@@ -91,7 +91,7 @@ function App() {
         </div>
 
         <footer className="flex flex-col gap-y-6 md:flex-row w-full px-8 justify-between md:w-8/12 2xl:w-2/5 mt-12 text-neutral-500 text-sm xl:w-1/2">
-          <p>&copy; 2022 Url Shortener</p>
+          <p>&copy; 2022 Reducely</p>
 
           <ul className="flex flex-col gap-x-8 gap-y-2 md:flex-row lg:gap-20">
             <li><a href="https:/github.com/ermesonqueiroz/url-shortener-web" target="_blank">GitHub</a></li>
