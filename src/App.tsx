@@ -84,7 +84,7 @@ function App() {
               />
             </div>
 
-            <FormSubmit className="h-12 rounded-md outline-none w-full bg-teal-600 text-neutral-100 text-lg uppercase font-bold cursor-pointer hover:bg-teal-700 transition-colors">
+            <FormSubmit className="h-12 rounded-md outline-none w-full bg-accent text-neutral-100 text-lg uppercase font-bold cursor-pointer hover:bg-accent/60 transition-colors">
               ENCURTAR
             </FormSubmit>
           </Form>
@@ -135,7 +135,7 @@ function App() {
         </Button>
 
         <div>
-          <DialogDismiss className="bg-teal-600 px-5 py-3 text-lg text-neutral-200 rounded-xl font-bold">
+          <DialogDismiss className="bg-accent px-5 py-3 text-lg text-neutral-200 rounded-xl font-bold">
             OK
           </DialogDismiss>
         </div>
