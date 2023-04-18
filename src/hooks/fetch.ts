@@ -6,7 +6,7 @@ export interface UseFetchRequest {
   body?: any;
 }
 
-export async function useFetch<T = any>({ endPoint, method, body }: UseFetchRequest): Promise<T> {
+export async function useFetch<T = any>({ endPoint, method, body }: UseFetchRequest): Promise<{ data: T, status: number }> {
   const { data, status } = await api<T>({
     method,
     url: endPoint,

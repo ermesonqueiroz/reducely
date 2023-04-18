@@ -20,7 +20,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   const form = useFormState({
-    defaultValues: { url: '' },
+    defaultValues: { target: '' },
   });
   const dialog = useDialogState();
   const [link, setLink] = useState({} as Link);
@@ -45,16 +45,12 @@ function App() {
       dialog.toggle();
 
       form.setValue('target', '');
-    } catch ({ response: { data: { error } } }) {
-      form.setError('target', error);
+    } catch (error) {
+      form.setError('target', error as string);
     }
   });
 
   function copyLinkToClipboard(e: React.MouseEvent<HTMLButtonElement>) {
-    linkCopyArea.current.select();
-    document.execCommand('copy');
-    e.target.focus();
-
     toast.success('Link copiado!');
   }
 
@@ -124,7 +120,7 @@ function App() {
             className="bg-neutral-200 cursor-pointer outline-none w-full pointer-events-none"
             ref={linkCopyArea}
             value={`${import.meta.env.VITE_API_URL}/r/${link.id}`}
-            readonly
+            readOnly
           />
 
           <div>
