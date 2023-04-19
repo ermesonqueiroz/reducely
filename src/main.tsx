@@ -22,14 +22,18 @@ function RedirectPage() {
 
 const router = createBrowserRouter([
   {
-    path: "/reducely/",
+    path: "/",
     element: <App />,
-  },
-  {
-    path: "/reducely/:id",
-    element: <RedirectPage />
+    children: [
+      {
+        path: ":id",
+        element: <RedirectPage />
+      }
+    ]
   }
-]);
+], {
+  basename: '/reducely/'
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
