@@ -13,7 +13,7 @@ function RedirectPage() {
   const { id } = useParams()
 
   useEffect(() => {
-    window.location.href = `${import.meta.env.VITE_API_URL}/api/v1/link/${id}`
+    window.location.href = `${import.meta.env.VITE_API_URL}/r/${id}`
   }, [])
 
   return <></>
