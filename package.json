@@ -10,7 +10,6 @@
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
-  "homepage": "https://ermesonqueiroz.github.io/reducely",
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.3",
     "axios": "^1.2.0",

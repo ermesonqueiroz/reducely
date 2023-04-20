@@ -5,7 +5,6 @@ import { ThemeProvider } from './contexts/theme'
 import {
   createBrowserRouter,
   RouterProvider,
-  Navigate,
   useParams
 } from 'react-router-dom'
 import './styles/globals.css'
@@ -24,16 +23,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: ":id",
-        element: <RedirectPage />
-      }
-    ]
-  }
-], {
-  basename: '/reducely/'
-});
+  },
+    {
+      path: "/:id",
+      element: <RedirectPage />
+    }
+]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
