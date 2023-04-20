@@ -65,7 +65,7 @@ function App() {
                 <div className="flex flex-col w-full">
                   <Input
                     type="url"
-                    placeholder="https://www.mylongurl.com"
+                    placeholder="https://www.minha.url.longa.com"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.target}
