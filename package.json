@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.3",
+    "@vercel/analytics": "^1.0.0",
     "axios": "^1.2.0",
     "class-variance-authority": "^0.5.2",
     "clipboard": "^2.0.11",

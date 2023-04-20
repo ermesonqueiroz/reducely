@@ -8,6 +8,7 @@ import {
   useParams
 } from 'react-router-dom'
 import './styles/globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 function RedirectPage() {
   const { id } = useParams()
@@ -32,8 +33,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+      <Analytics />
+    </>
   </React.StrictMode>
 )
