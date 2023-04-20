@@ -6,6 +6,7 @@ import { Moon, Sun, Loader, Copy, Check } from 'lucide-react'
 import { useTheme } from './contexts/theme'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { FullLogo } from '@/components/ui/FullLogo'
 
 function App() {
   const { toggleColorMode, darkMode } = useTheme()
@@ -14,8 +15,10 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col h-screen items-center bg-background justify-center">
-        <header className="fixed top-0 self-end m-4">
+      <div className="fixed top-0 w-full flex justify-center">
+        <header className="p-8 flex justify-between w-full">
+          <FullLogo />
+
           <Button
             className="px-0 h-10 w-10"
             variant="ghost"
@@ -28,9 +31,11 @@ function App() {
             }
           </Button>
         </header>
+      </div>
+      <div className="flex flex-col mt-[15vh] md:h-screen md:mt-0 items-center justify-center">
         <div className="flex w-full px-8 md:w-8/12 xl:w-1/2 2xl:w-2/5 flex-col gap-y-6">
           <div className="uppercase font-bold">
-            <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight">Encurte seu link</h1>
+            <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight">Encurte sua URL</h1>
           </div>
 
           <Formik
